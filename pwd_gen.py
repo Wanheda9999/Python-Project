@@ -4,7 +4,7 @@ import string
 
 def randompwd(password_len):
     characters = string.ascii_letters + string.digits + string.punctuation
-    password = ''.join(random.choice(characters) for _ in range(password_len))
+    password = ''.join(random.choice(characters) for i in range(password_len))
     return password
 
 
