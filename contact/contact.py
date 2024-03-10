@@ -9,17 +9,14 @@ def charger_contacts():
         with open(fichier_contacts, 'r') as f:
             return json.load(f)
     else:
-        # Si le fichier n'existe pas, retourne un dictionnaire vide
         return {}
 
 
-# Fonction pour sauvegarder les contacts dans le fichier
 def sauvegarder_contacts(contacts):
     with open(fichier_contacts, 'w') as f:
         json.dump(contacts, f)
 
 
-# Charger les contacts existants ou créer un nouveau dictionnaire
 contacts = charger_contacts()
 
 print("Bienvenue sur votre gestionnaire de contact")
@@ -49,7 +46,6 @@ while True:
 
 
     elif user_choice.lower() == 'q':
-        # Sauvegarder les contacts et quitter
         sauvegarder_contacts(contacts)
         print("Contacts enregistrés. Au revoir!")
         break
